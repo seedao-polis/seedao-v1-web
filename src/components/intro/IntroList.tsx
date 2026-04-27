@@ -1,9 +1,7 @@
 import whitePaper from '../../assets/intro/white-paper.svg';
 import meta from '../../assets/intro/meta.svg';
 import seedao from '../../assets/intro/seedao.svg';
-import global from '../../assets/intro/global.svg';
 import city from '../../assets/intro/city-hall.svg';
-import combinator from '../../assets/intro/combinator.svg';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
@@ -31,15 +29,9 @@ const IntroList = () => {
           </a>
         </li>
         <li>
-          <a href="https://app.seedao.xyz" target="_blank" rel="noreferrer">
+          <a href="https://seedao.top" target="_blank" rel="noreferrer">
             <img src={seedao} alt="SeeDAO App" />
             <span>{t('Link-App')}</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://seeu.network/" target="_blank" rel="noreferrer">
-            <img src={global} alt="SeeU Network" />
-            <span>{t('Link-Net')}</span>
           </a>
         </li>
         <li>
@@ -50,12 +42,6 @@ const IntroList = () => {
           >
             <img src={city} alt="SeeDAO City Hall" />
             <span>{t('Link-City-Hall')}</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://beta.seedao.cc/" target="_blank" rel="noreferrer">
-            <img src={combinator} alt="SeeDAO Combinator" />
-            <span>{t('Link-Combinator')}</span>
           </a>
         </li>
       </Lists>

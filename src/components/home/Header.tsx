@@ -178,7 +178,7 @@ const Header = () => {
             </div>
           </HeaderTitle>
           <div>
-            <a href="https://app.seedao.xyz/sns" target="_blank" rel="noreferrer">
+            <a href="https://seedao.top/sns" target="_blank" rel="noreferrer">
               <JoinButton>{t('Earn-Membership')}</JoinButton>
             </a>
             <BtnLine>

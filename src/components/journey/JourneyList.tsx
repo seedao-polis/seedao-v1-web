@@ -11,27 +11,27 @@ const IntroList = () => {
     <Box>
       <Lists>
         <li>
-          <a href="https://app.seedao.xyz/sns" target="_blank" rel="noreferrer">
+          <a href="https://seedao.top/sns" target="_blank" rel="noreferrer">
             <img src={onbording} alt="Onboarding process" />
             <span>{t('Onboarding-process')}</span>
           </a>
         </li>
 
         <li>
-          <a href="https://app.seedao.xyz/explore" target="_blank" rel="noreferrer">
+          <a href="https://seedao.top/explore" target="_blank" rel="noreferrer">
             <img src={bounties} alt="Bounties" />
             <span>{t('Bounties')}</span>
           </a>
         </li>
 
         <li>
-          <a href="https://seed.seedao.xyz/" target="_blank" rel="noreferrer">
+          <a href="https://seed.seedao.top" target="_blank" rel="noreferrer">
             <img src={seed} alt="Seed NFT" />
             <span>{t('Seed-NFT')}</span>
           </a>
         </li>
         <li>
-          <a href="https://node.seedao.xyz/" target="_blank" rel="noreferrer">
+          <a href="https://node.seedao.top" target="_blank" rel="noreferrer">
             <img src={nodes} alt="Nodes Consensus Congress" />
             <span>{t('Nodes-Consensus-Congress')}</span>
           </a>

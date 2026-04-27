@@ -215,7 +215,7 @@ const Home = () => {
         <Sellix href="https://sellix.io/" target="_blank" rel="noreferrer" />
         <Echo href="https://echo3.world/" target="_blank" rel="noreferrer" />
         <DAOLink href="https://app.daolink.space" target="_blank" rel="noreferrer" />
-        <SeeDAO href="https://app.seedao.xyz/" target="_blank" rel="noreferrer" />
+        <SeeDAO href="https://seedao.top/" target="_blank" rel="noreferrer" />
         <Joyid href="https://joy.id/" target="_blank" rel="noreferrer" />
         <img src={banner} alt="" />
       </BannerImg>

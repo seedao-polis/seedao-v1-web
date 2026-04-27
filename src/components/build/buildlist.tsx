@@ -8,7 +8,7 @@ const BuildList = () => {
     <Box>
       <Lists>
         <li>
-          <a href="https://app.seedao.xyz/proposal" target="_blank" rel="noreferrer">
+          <a href="https://seedao.top/proposal" target="_blank" rel="noreferrer">
             <img src={seedao} alt="SeeDAO" />
             <span>{t('Link-Proposal')}</span>
           </a>
