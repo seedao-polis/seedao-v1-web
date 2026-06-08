@@ -80,7 +80,7 @@ const MemberList = () => {
   const [discordAmount, SetDiscordAmount] = useState(0);
   const [seedHolders, setSEEDHolders] = useState(0);
   const [governNodes, setGovernNodes] = useState(0);
-  const [base1, setBase1] = useState('https://spp-indexer.seedao.tech');
+  const [base1, setBase1] = useState('https://spp-indexer.seedao.top');
   const [base2, setBase2] = useState('https://test-api.seedao.tech');
   const [scr, setScr] = useState(0);
   const [snsNum, setSnsNum] = useState(0);
@@ -93,7 +93,7 @@ const MemberList = () => {
       setBase1('https://test-spp-indexer.seedao.tech');
       setBase2('https://test-api.seedao.tech');
     } else {
-      setBase1('https://spp-indexer.seedao.tech');
+      setBase1('https://spp-indexer.seedao.top');
       setBase2('https://api.seedao.tech');
     }
   }, []);
