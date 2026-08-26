@@ -42,8 +42,8 @@ dig +short seedao.xyz
 sudo mkdir -p /srv/seedao2
 sudo chown "$USER":"$USER" /srv/seedao2
 cd /srv/seedao2
-git clone <your-repo-url> seedao-website-v4
-cd seedao-website-v4
+git clone https://github.com/seedao-polis/seedao-v1-web.git seedao-v1-web
+cd seedao-v1-web
 ```
 
 也可只拷贝 `deploy/` 目录。
@@ -61,7 +61,7 @@ ghcr.io/<owner>/<repo>:latest
 ghcr.io/<owner>/<repo>:sha-<short>
 ```
 
-例如：`ghcr.io/openpolis-dev/seedao-website-v4:latest`
+例如：`ghcr.io/seedao-polis/seedao-v1-web:latest`
 
 首次构建成功后：
 
@@ -95,7 +95,7 @@ nano deploy/.env
 至少设置：
 
 ```bash
-WEB_IMAGE=ghcr.io/openpolis-dev/seedao-website-v4:latest
+WEB_IMAGE=ghcr.io/seedao-polis/seedao-v1-web:latest
 ```
 
 GHCR 的 owner/repo 需为小写。
@@ -117,7 +117,7 @@ docker login registry.cn-hangzhou.aliyuncs.com -u <user> -p <password>
 启动：
 
 ```bash
-cd /srv/seedao2/seedao-website-v4
+cd /srv/seedao2/seedao-v1-web
 chmod +x deploy/pull-and-up.sh
 ./deploy/pull-and-up.sh
 ```
@@ -164,7 +164,7 @@ sudo certbot renew --dry-run
 `main`/`master` CI 完成后：
 
 ```bash
-cd /srv/seedao2/seedao-website-v4
+cd /srv/seedao2/seedao-v1-web
 ./deploy/pull-and-up.sh
 ```
 

@@ -9,7 +9,7 @@
 
 services:
   web:
-    image: ${WEB_IMAGE:?Set WEB_IMAGE in deploy/.env e.g. ghcr.io/OWNER/seedao-website-v4:latest}
+    image: ${WEB_IMAGE:?Set WEB_IMAGE in deploy/.env e.g. ghcr.io/seedao-polis/seedao-v1-web:latest}
     container_name: seedao-website
     restart: unless-stopped
     ports:

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Pull the latest pre-built image and recreate the container.
 # Usage (on the server):
-#   cd /srv/seedao2/seedao-website-v4
+#   cd /srv/seedao2/seedao-v1-web
 #   ./deploy/pull-and-up.sh
 
 set -euo pipefail
