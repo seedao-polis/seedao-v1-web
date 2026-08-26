@@ -1,5 +1,5 @@
 # Production deploy: pull a pre-built image (from GHCR or Aliyun ACR).
-# Domain: seedao.xyz (this static marketing site)
+# Domain: v1.seedao.xyz (this static marketing site)
 #
 # On the server:
 #   cp deploy/.env.example deploy/.env   # set WEB_IMAGE
@@ -13,7 +13,7 @@ services:
     container_name: seedao-website
     restart: unless-stopped
     ports:
-      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:${HOST_PORT:-3080}:3000"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/health"]
       interval: 30s

@@ -35,5 +35,6 @@ docker compose -f deploy/docker-compose.yml --env-file "$ENV_FILE" up -d
 
 echo "→ Health"
 sleep 2
-curl -fsS http://127.0.0.1:3000/health && echo
+host_port="${HOST_PORT:-3080}"
+curl -fsS "http://127.0.0.1:${host_port}/health" && echo
 echo "Done."
