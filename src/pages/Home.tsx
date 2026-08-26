@@ -1,6 +1,5 @@
 import Header from '../components/home/Header';
 import banner from '../assets/home/banner.jpg';
-import MemberList from '../components/home/MemberList';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import PageMeta from '../components/SEO/PageMeta';
@@ -215,11 +214,10 @@ const Home = () => {
         <Sellix href="https://sellix.io/" target="_blank" rel="noreferrer" />
         <Echo href="https://echo3.world/" target="_blank" rel="noreferrer" />
         <DAOLink href="https://app.daolink.space" target="_blank" rel="noreferrer" />
-        <SeeDAO href="https://seedao.top/" target="_blank" rel="noreferrer" />
+        <SeeDAO href="https://app-v1.seedao.xyz/" target="_blank" rel="noreferrer" />
         <Joyid href="https://joy.id/" target="_blank" rel="noreferrer" />
         <img src={banner} alt="" />
       </BannerImg>
-      <MemberList />
     </section>
   );
 };

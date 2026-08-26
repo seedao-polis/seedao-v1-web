@@ -1,0 +1,22 @@
+# Production deploy: pull a pre-built image (from GHCR or Aliyun ACR).
+# Domain: seedao.xyz (this static marketing site)
+#
+# On the server:
+#   cp deploy/.env.example deploy/.env   # set WEB_IMAGE
+#   docker login ghcr.io -u USER -p TOKEN   # or ACR login
+#   docker compose -f deploy/docker-compose.yml --env-file deploy/.env pull
+#   docker compose -f deploy/docker-compose.yml --env-file deploy/.env up -d
+
+services:
+  web:
+    image: ${WEB_IMAGE:?Set WEB_IMAGE in deploy/.env e.g. ghcr.io/OWNER/seedao-website-v4:latest}
+    container_name: seedao-website
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:3000"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

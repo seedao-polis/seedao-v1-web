@@ -1,4 +1,3 @@
-import onbording from '../../assets/journey/onbording.svg';
 import bounties from '../../assets/journey/bounties.svg';
 import seed from '../../assets/journey/seed.svg';
 import nodes from '../../assets/journey/nodes.svg';
@@ -11,27 +10,20 @@ const IntroList = () => {
     <Box>
       <Lists>
         <li>
-          <a href="https://seedao.top/sns" target="_blank" rel="noreferrer">
-            <img src={onbording} alt="Onboarding process" />
-            <span>{t('Onboarding-process')}</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="https://seedao.top/explore" target="_blank" rel="noreferrer">
+          <a href="https://app-v1.seedao.xyz/explore" target="_blank" rel="noreferrer">
             <img src={bounties} alt="Bounties" />
             <span>{t('Bounties')}</span>
           </a>
         </li>
 
         <li>
-          <a href="https://seed.seedao.top" target="_blank" rel="noreferrer">
+          <a href="https://seed.seedao.xyz" target="_blank" rel="noreferrer">
             <img src={seed} alt="Seed NFT" />
             <span>{t('Seed-NFT')}</span>
           </a>
         </li>
         <li>
-          <a href="https://node.seedao.top" target="_blank" rel="noreferrer">
+          <a href="https://node-v1.seedao.xyz" target="_blank" rel="noreferrer">
             <img src={nodes} alt="Nodes Consensus Congress" />
             <span>{t('Nodes-Consensus-Congress')}</span>
           </a>
@@ -84,39 +76,21 @@ const Lists = styled.ul`
     }
 
     &:first-child {
-      background: linear-gradient(180deg, #e4fef5 0%, #fbf5ef 100%);
-      &:hover {
-        background: linear-gradient(180deg, #e4fef5 0%, #fff 100%);
-      }
-    }
-    &:nth-child(2) {
       background: linear-gradient(180deg, #ffefed 0%, #fbf5ef 100%);
       &:hover {
         background: linear-gradient(180deg, #ffefed 0%, #fff 100%);
       }
     }
-    &:nth-child(3) {
+    &:nth-child(2) {
       background: linear-gradient(180deg, #ededff 0%, #fbf5ef 100%);
       &:hover {
         background: linear-gradient(180deg, #ededff 0%, #fff 100%);
       }
     }
-    &:nth-child(4) {
+    &:nth-child(3) {
       background: linear-gradient(180deg, #edf9ff 0%, #fbf5ef 100%);
       &:hover {
         background: linear-gradient(180deg, #edf9ff 0%, #fff 100%);
-      }
-    }
-    &:nth-child(5) {
-      background: linear-gradient(180deg, #fffaed 0%, #fbf5ef 100%);
-      &:hover {
-        background: linear-gradient(180deg, #fffaed 0%, #fff 100%);
-      }
-    }
-    &:nth-child(6) {
-      background: linear-gradient(180deg, #edffed 0%, #fbf5ef 100%);
-      &:hover {
-        background: linear-gradient(180deg, #edffed 0%, #fff 100%);
       }
     }
   }

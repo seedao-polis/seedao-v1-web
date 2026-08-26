@@ -1,6 +1,5 @@
 import BuildHeader from '../components/build/BuildHeader';
 import BuildDetails from '../components/build/BuildDetails';
-import Buildlist from '../components/build/buildlist';
 import PageMeta from '../components/SEO/PageMeta';
 
 const Build = () => {
@@ -36,7 +35,6 @@ const Build = () => {
       <div>
         <BuildHeader />
         <BuildDetails />
-        <Buildlist />
       </div>
     </section>
   );

@@ -2,12 +2,6 @@ import { useLottie } from 'lottie-react';
 import homeBanner from '../../assets/Home-banner.json';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
-import twitter from '../../assets/footer/twitter.png';
-import Dis from '../../assets/footer/Dis.png';
-import mi from '../../assets/footer/Mi.png';
-import TwitterHover from '../../assets/footer/hover/twitter.png';
-import DisHover from '../../assets/footer/hover/Dis.png';
-import miHover from '../../assets/footer/hover/Mi.png';
 
 export const HeaderSection = styled.div`
   background: linear-gradient(0deg, #fbf5ef 0.09%, #f9f6ff 96.69%);
@@ -107,23 +101,6 @@ export const HeaderTitle = styled.h1`
     }
   }
 `;
-export const JoinButton = styled.button`
-  border: none;
-  background-color: #a6a2f9;
-  color: #000;
-  font-size: 20px;
-  margin-left: 4%;
-  font-family: 'DMSans-Bold';
-  padding: 17px 46px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 40px;
-  @media (max-width: 768px) {
-    width: 88%;
-    margin-left: 0;
-  }
-`;
-
 export const HeaderImg = styled.div`
   flex-shrink: 0;
   @media (max-width: 768px) {
@@ -131,31 +108,6 @@ export const HeaderImg = styled.div`
     margin-left: 0;
     padding-top: 10vw;
   }
-`;
-
-const BtnLine = styled.div`
-    margin: 30px 0 0 4vw;
-  img{
-    max-width: 40px;
-    margin-right: 20px;
-    
-  }
-  a{
-    .hover{
-      display: none;
-    }
-    .nor{
-      display: inline-block;
-    }
-    &:hover{
-      .hover{
-        display: inline-block;
-      }
-      .nor{
-        display: none;
-      }
-    }
-    
 `;
 
 const Header = () => {
@@ -177,33 +129,6 @@ const Header = () => {
               <div className={i18n.language}>{t('Home-Cover-Title-2')}</div>
             </div>
           </HeaderTitle>
-          <div>
-            <a href="https://seedao.top/sns" target="_blank" rel="noreferrer">
-              <JoinButton>{t('Earn-Membership')}</JoinButton>
-            </a>
-            <BtnLine>
-              <a href="https://discord.com/invite/seedao-xyz" target="_blank" rel="noreferrer">
-                <img src={Dis} alt="" className="nor" />
-                <img src={DisHover} alt="" className="hover" />
-              </a>
-              {/* <a
-                            href="https://t.me/theseedao"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <img src={Tg} alt=""  className="nor" />
-                            <img src={TgHover} alt="" className="hover" />
-                        </a> */}
-              <a href="https://twitter.com/see_dao" target="_blank" rel="noreferrer">
-                <img src={twitter} alt="" className="nor" />
-                <img src={TwitterHover} alt="" className="hover" />
-              </a>
-              <a href="https://seedao.mirror.xyz" target="_blank" rel="noreferrer">
-                <img src={mi} alt="" className="nor" />
-                <img src={miHover} alt="" className="hover" />
-              </a>
-            </BtnLine>
-          </div>
         </HeaderLeft>
         <HeaderImg>
           {/* <img src={View} alt="" /> */}

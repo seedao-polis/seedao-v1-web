@@ -29,7 +29,7 @@ const IntroList = () => {
           </a>
         </li>
         <li>
-          <a href="https://seedao.top" target="_blank" rel="noreferrer">
+          <a href="https://app-v1.seedao.xyz" target="_blank" rel="noreferrer">
             <img src={seedao} alt="SeeDAO App" />
             <span>{t('Link-App')}</span>
           </a>

@@ -12,17 +12,6 @@ import image12 from '../../assets/footer/image-12.svg';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
-import twitter from '../../assets/footer/twitter.png';
-import TwitterHover from '../../assets/footer/hover/twitter.png';
-import Dis from '../../assets/footer/Dis.png';
-import DisHover from '../../assets/footer/hover/Dis.png';
-import github from '../../assets/footer/Github.png';
-import githubHover from '../../assets/footer/hover/Github.png';
-import mi from '../../assets/footer/Mi.png';
-import miHover from '../../assets/footer/hover/Mi.png';
-import mail from '../../assets/footer/mail.svg';
-import mailHover from '../../assets/footer/hover/message.png';
-
 import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.section`
@@ -166,56 +155,6 @@ export const Cooperation = styled.div`
     margin-top: 35px;
   }
 `;
-export const SocialMedia = styled.div`
-  /* width: 33%; */
-  h5 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 40px;
-    font-family: 'DMSans-Bold';
-    text-transform: uppercase;
-  }
-
-  @media (max-width: 768px) {
-    margin-top: 32px;
-    h5 {
-      margin-bottom: 20px;
-      margin-top: 22px;
-    }
-  }
-`;
-export const SocialLinks = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 310px;
-  img {
-    max-width: 36px;
-  }
-  a{
-    .hover{
-      display: none;
-    }
-    .nor{
-      display: inline-block;
-    }
-    &:hover{
-      .hover{
-        display: inline-block;
-      }
-      .nor{
-        display: none;
-    }
-  }
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 100%;
-    gap:10px
-  }
-  
-`;
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -260,38 +199,6 @@ const Footer = () => {
             </Partners>
             {/* portfolio section */}
           </PartnersContainer>
-        </li>
-        <li>
-          {' '}
-          <SocialMedia>
-            <h5>{t('Social-medial')}</h5>
-            <SocialLinks>
-              <a href="https://github.com/SeeDAO-OpenSource" target="_blank" rel="noreferrer">
-                {/* Replace with actual images or icons for GitHub */}
-                {<img src={github} alt="" className="nor" />}
-                {<img src={githubHover} alt="" className="hover" />}
-              </a>
-              <a href="https://twitter.com/see_dao" target="_blank" rel="noreferrer">
-                <img src={twitter} alt="" className="nor" />
-                <img src={TwitterHover} alt="" className="hover" />
-              </a>
-              <a href="https://discord.com/invite/seedao-xyz" target="_blank" rel="noreferrer">
-                <img src={Dis} alt="" className="nor" />
-                <img src={DisHover} alt="" className="hover" />
-              </a>
-
-              {/* { </SocialLinks> } */}
-              {/* <SocialLinks> */}
-              <a href="https://seedao.mirror.xyz" target="_blank" rel="noreferrer">
-                <img src={mi} alt="" className="nor" />
-                <img src={miHover} alt="" className="hover" />
-              </a>
-              <a href="mailto:contactus@seedao.info">
-                <img src={mail} alt="" className="nor" />
-                <img src={mailHover} alt="" className="hover" />
-              </a>
-            </SocialLinks>
-          </SocialMedia>
         </li>
       </FooterSection>
       <div className="btmBox">

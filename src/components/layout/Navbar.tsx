@@ -317,15 +317,6 @@ const Navbar = () => {
                     {t('Journey')}
                   </Navigation>
                 </NavigationLink>
-                <NavigationLink>
-                  <Navigation
-                    className={({ isActive }) => (isActive ? 'active' : '')}
-                    to="/build"
-                    onClick={closeMobileMenu}
-                  >
-                    {t('Build')}
-                  </Navigation>
-                </NavigationLink>
                 {/*<NavigationLink style={{ pointerEvents: "none" }}>*/}
                 {/*  <Navigation to="/podcast" onClick={closeMobileMenu}>*/}
                 {/*    {t("Podcast")}*/}
@@ -345,10 +336,6 @@ const Navbar = () => {
                 </NavigationLink>
                 {/*<NavigationLink>*/}
                 {/*  <NavDropdown title={t("Home")} id="drop1">*/}
-                {/*    <NavDropdown.Item href="https://seedao.top/sns" target="_blank" rel="noreferrer" >*/}
-                {/*      {t("Earn-Membership")}*/}
-                {/*    </NavDropdown.Item>*/}
-                {/*    <NavDropdown.Divider />*/}
                 {/*    <NavDropdown.Item href="/" onClick={closeMobileMenu}>*/}
                 {/*        {t("Home")}*/}
                 {/*    </NavDropdown.Item>*/}
@@ -362,7 +349,11 @@ const Navbar = () => {
                     <NavDropdown.Item href="SeeDAO-Meta.pdf" target="_blank" rel="noreferrer">
                       {t('Link-Meta')}
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="https://seedao.top" target="_blank" rel="noreferrer">
+                    <NavDropdown.Item
+                      href="https://app-v1.seedao.xyz"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       {t('Link-App')}
                     </NavDropdown.Item>
                     <NavDropdown.Item
@@ -379,30 +370,21 @@ const Navbar = () => {
                 <NavigationLink>
                   <NavDropdown title={t('Journey')} id="drop3">
                     <NavDropdown.Item
-                      href="https://seedao.top/sns"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {t('Onboarding-process')}
-                    </NavDropdown.Item>
-                    {/* <NavDropdown.Item href="https://seedao.notion.site/SeeDAO-title-3776ce83b95e4a5f9209d90911ed84c1?pvs=4" target="_blank" rel="noreferrer">{t("Contributor-Identity")}</NavDropdown.Item> */}
-                    <NavDropdown.Item
-                      href="https://seedao.top/explore"
+                      href="https://app-v1.seedao.xyz/explore"
                       target="_blank"
                       rel="noreferrer"
                     >
                       {t('Bounties')}
                     </NavDropdown.Item>
-                    {/* <NavDropdown.Item href="https://seedao.top/proposal" target="_blank" rel="noreferrer">{t("Proposals")}</NavDropdown.Item> */}
                     <NavDropdown.Item
-                      href="https://seed.seedao.top"
+                      href="https://seed.seedao.xyz"
                       target="_blank"
                       rel="noreferrer"
                     >
                       {t('Seed-NFT')}
                     </NavDropdown.Item>
                     <NavDropdown.Item
-                      href="https://node.seedao.top"
+                      href="https://node-v1.seedao.xyz"
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -412,27 +394,13 @@ const Navbar = () => {
                     <NavDropdown.Item href="/journey">{t('Journey')}</NavDropdown.Item>
                   </NavDropdown>
                 </NavigationLink>
-
-                <NavigationLink>
-                  <NavDropdown title={t('Build')} id="drop4">
-                    <NavDropdown.Item
-                      href="https://seedao.top/proposal"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {t('Link-Proposal')}
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="/build">{t('Build')}</NavDropdown.Item>
-                  </NavDropdown>
-                </NavigationLink>
               </NavList2>
               <NavButton>
                 <LanguageBtn onClick={handleChangeLanguage}>
                   <img src={lng} alt="" />
                   <p>{currentLanguage === 'en' ? 'CN' : 'EN'}</p>
                 </LanguageBtn>
-                <a href="https://seedao.top" rel="noreferrer" target="_blank">
+                <a href="https://app-v1.seedao.xyz" rel="noreferrer" target="_blank">
                   <Button>{t('Enter-App')}</Button>
                 </a>
               </NavButton>
