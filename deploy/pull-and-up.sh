@@ -27,11 +27,18 @@ if [[ -z "${WEB_IMAGE:-}" ]]; then
   exit 1
 fi
 
-echo "→ Pulling $WEB_IMAGE"
-docker compose -f deploy/docker-compose.yml --env-file "$ENV_FILE" pull
+# Pin the Compose project so a sibling frontend (seedao-pwa) that also uses
+# deploy/docker-compose.yml is not treated as the same stack.
+COMPOSE_PROJECT_NAME="${COMPOSE_PROJECT_NAME:-seedao-v1-web}"
+compose() {
+  docker compose -p "$COMPOSE_PROJECT_NAME" -f deploy/docker-compose.yml --env-file "$ENV_FILE" "$@"
+}
+
+echo "→ Project $COMPOSE_PROJECT_NAME  pulling $WEB_IMAGE"
+compose pull
 
 echo "→ Recreating seedao-website"
-docker compose -f deploy/docker-compose.yml --env-file "$ENV_FILE" up -d
+compose up -d
 
 echo "→ Health"
 sleep 2

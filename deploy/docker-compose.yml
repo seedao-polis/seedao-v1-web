@@ -4,8 +4,8 @@
 # On the server:
 #   cp deploy/.env.example deploy/.env   # set WEB_IMAGE
 #   docker login ghcr.io -u USER -p TOKEN   # or ACR login
-#   docker compose -f deploy/docker-compose.yml --env-file deploy/.env pull
-#   docker compose -f deploy/docker-compose.yml --env-file deploy/.env up -d
+#   docker compose -p seedao-v1-web -f deploy/docker-compose.yml --env-file deploy/.env pull
+#   docker compose -p seedao-v1-web -f deploy/docker-compose.yml --env-file deploy/.env up -d
 
 services:
   web:

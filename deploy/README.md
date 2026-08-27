@@ -139,6 +139,7 @@ nano deploy/.env
 
 ```bash
 WEB_IMAGE=ghcr.io/seedao-polis/seedao-v1-web:latest
+COMPOSE_PROJECT_NAME=seedao-v1-web
 HOST_PORT=3080
 ```
 
@@ -162,7 +163,7 @@ chmod +x deploy/pull-and-up.sh
 检查：
 
 ```bash
-docker compose -f deploy/docker-compose.yml ps
+docker compose -p seedao-v1-web -f deploy/docker-compose.yml --env-file deploy/.env ps
 docker logs seedao-website
 curl -sS http://127.0.0.1:3080/health
 # 应输出: ok
