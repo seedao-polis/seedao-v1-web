@@ -17,7 +17,7 @@ const IntroList = () => {
         </li>
 
         <li>
-          <a href="https://seed.seedao.xyz" target="_blank" rel="noreferrer">
+          <a href="https://seed-v1.seedao.xyz" target="_blank" rel="noreferrer">
             <img src={seed} alt="Seed NFT" />
             <span>{t('Seed-NFT')}</span>
           </a>

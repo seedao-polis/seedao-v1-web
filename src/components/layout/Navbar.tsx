@@ -377,7 +377,7 @@ const Navbar = () => {
                       {t('Bounties')}
                     </NavDropdown.Item>
                     <NavDropdown.Item
-                      href="https://seed.seedao.xyz"
+                      href="https://seed-v1.seedao.xyz"
                       target="_blank"
                       rel="noreferrer"
                     >
